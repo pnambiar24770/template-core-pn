@@ -3,7 +3,7 @@
 source /environment.sh
 
 # initialize launch file
-dt-launchfile-init --quiet
+dt-launchfile-init
 
 # YOUR CODE BELOW THIS LINE
 # ----------------------------------------------------------------------------
@@ -13,11 +13,12 @@ dt-launchfile-init --quiet
 # NOTE: Use `dt-exec COMMAND` to run the main process (blocking process)
 
 # launching app
-dt-launcher-default-${ROBOT_TYPE}
+dt-exec rosrun complete_image_pipeline calibrate_extrinsics \
+    | tee /data/config/calibrations/camera_extrinsic/${VEHICLE_NAME}.log
 
 
 # ----------------------------------------------------------------------------
 # YOUR CODE ABOVE THIS LINE
 
 # wait for app to end
-dt-launchfile-join --quiet
+dt-launchfile-join
