@@ -1,7 +1,7 @@
 # parameters
 ARG REPO_NAME="template-core-pn"
-ARG DESCRIPTION="<DESCRIPTION_HERE>"
-ARG MAINTAINER="<YOUR_FULL_NAME> (<YOUR_EMAIL_ADDRESS>)"
+ARG DESCRIPTION="duckietown template test"
+ARG MAINTAINER="John Doe JohnDoe@gmail.com"
 # pick an icon from: https://fontawesome.com/v4.7.0/icons/
 ARG ICON="cube"
 
